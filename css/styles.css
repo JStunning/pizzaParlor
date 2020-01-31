@@ -1,7 +1,19 @@
 .toppings {
   border: 1px solid red;
+  margin: 1.5%;
+  padding: 2%;
+}
+
+.toppings p {
+  float: right;
+}
+
+.toppings img {
+  width: 225px;
+  height: 175px;
 }
 
 .sizes {
   border: 1px solid blue;
+  margin: 2.25%;
 }
