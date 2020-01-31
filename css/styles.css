@@ -1,21 +1,28 @@
-.toppings {
-  border: 1px solid red;
-  margin: 1.5%;
-  padding: 2%;
+body {
+  background-color: black;
+  color: white;
 }
 
-.toppings h3 {
+.container {
+  border: 5px solid green;
+}
+
+#navbar {
   text-align: center;
+  border-bottom: 5px solid red;
+  background-color: green;
+  width: 100%;
 }
 
-.toppings img {
-  width: 225px;
-  height: 175px;
+#pizza img {
   float: right;
 }
 
+#options label {
+  margin-top: 4%;
+}
+
 #buttonBox {
-  border: 1px solid red;
-  padding: 2% 5% 2% 20%;
-  margin: 0 30% 0 20%;
+  margin-top: 12%;
+  margin-bottom: 2%;
 }
