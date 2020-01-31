@@ -15,12 +15,16 @@ Pizza.prototype.price = function() {
   }
 }
 
-var pizzas = []
-
+var pizzas = [];
 
 $(document).ready(function(){
 
   var priceArr = [];
+
+  var totalPrice = 0;
+
+ 
+
   
   $("#addButton").click(function(event){
     event.preventDefault();
@@ -49,10 +53,13 @@ $(document).ready(function(){
       priceArr.push(pizzas[i].total);
     }
 
+    priceArr.forEach(price => totalPrice += price);
+
     console.log(priceArr)
+    console.log(totalPrice)
 
     $("#receiptTotal").show();
-    $("#receiptTotal").text(`Total: ${priceArr}`)
+    $("#receiptTotal").text(`Total: ${totalPrice}`)
 
     pizzas = [];
 
