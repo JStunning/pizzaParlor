@@ -1,11 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="./css/bootstrap.css">
   <link rel="stylesheet" href="./css/styles.css">
+  <script src="./js/jquery-3.4.1.js"></script>
   <script src="./js/scripts.js"></script>
   <title>Pizza Parlor</title>
 </head>
 <body>
-  <h1>Pizza Parlor</h1>
+  <div class="container">
+    <h1>Pizza Parlor</h1>
+
+    <div class="row" id="toppings"> 
+
+      <div class="col-md-3 toppings">
+        <h3>Peperoni</h3>
+      </div>
+
+      <div class="col-md-3 toppings">
+        <h3>Cheese</h3>
+      </div>
+
+      <div class="col-md-3 toppings">
+        <h3>Supreme</h3>
+      </div>
+
+      <div class="col-md-3 toppings">
+        <h3>Meat Lovers</h3>
+      </div>
+
+    </div> <!--Toppings end-->
+
+    <div class="row"> <!--Sizes-->
+
+      <div class="col-md-4 sizes">
+        <h3>Small</h3>
+      </div>
+
+      <div class="col-md-4 sizes">
+        <h3>Medium</h3>
+      </div>
+
+      <div class="col-md-4 sizes">
+        <h3>Large</h3>
+      </div>
+
+    </div> <!--Size end-->
+
+    <div id="buttonBox">
+      <button id="orderButton">order now</button>
+    </div>
+
+
+
+  </div> <!--container end-->
 </body>
 </html>
