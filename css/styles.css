@@ -3,6 +3,10 @@ body {
   color: white;
 }
 
+h3 {
+  margin-top: 2%;
+}
+
 .container {
   border: 5px solid green;
 }
@@ -12,6 +16,7 @@ body {
   border-bottom: 5px solid red;
   background-color: green;
   width: 100%;
+  text-shadow: 2px 2px black;
 }
 
 #pizza img {
@@ -26,3 +31,8 @@ body {
   margin-top: 12%;
   margin-bottom: 2%;
 }
+
+#orderBox {
+  text-align: center;
+}
+
