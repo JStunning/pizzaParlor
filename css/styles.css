@@ -14,7 +14,8 @@
   float: right;
 }
 
-.sizes {
-  border: 1px solid blue;
-  margin: 2.25%;
+#buttonBox {
+  border: 1px solid red;
+  padding: 2% 5% 2% 20%;
+  margin: 0 30% 0 20%;
 }
