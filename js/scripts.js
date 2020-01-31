@@ -19,6 +19,8 @@ var pizzas = []
 
 
 $(document).ready(function(){
+
+  var priceArr = [];
   
   $("#addButton").click(function(event){
     event.preventDefault();
@@ -32,29 +34,44 @@ $(document).ready(function(){
     var pizza = new Pizza(toppings, sizes, number)
     pizzas.push(pizza);
 
-    for(var i = 0; i < pizzas.length; i++){
-      $("#receipt").text(`<Your Receipt`)
-      $("#orderBox").append(`<br> ${pizzas[i].number}x ${pizzas[i].toppings} <br> ${pizzas[i].size} <br> $${pizzas[i].price()}`);
+
+    pizzas.forEach((pizza) => {
+      $("#receipt").text(`Your Receipt`)
+      $("#orderBox").append(`<div id="pizza-${priceArr.length}"><br> ${pizza.number}x ${pizza.toppings} <br> ${pizza.size} <br> $${pizza.price()}</div>`);
+    })
+    //(var i = 0; i < pizzas.length; i++){
+
+    $("#orderBox").show();
+    $("#orderButtonBox").show();
+
+
+    for(var i = 0; i < pizzas.length; i++) {
+      priceArr.push(pizzas[i].total);
     }
 
-    $("#orderButtonBox").show();
-    })
+    console.log(priceArr)
+
+    $("#receiptTotal").show();
+    $("#receiptTotal").text(`Total: ${priceArr}`)
+
+    pizzas = [];
+
+  })
 
     $("#totalButton").click(function(){
 
-      var grandTotal = 0;
+      // var grandTotal = 0;
 
-      for(var i = 0; i < pizzas.length; i++) {
-        console.log("pizzas" + pizzas)
-        console.log("pizzas price" + pizzas[i].price())
+      // for(var i = 0; i < pizzas.length; i++) {
+      //   console.log("pizzas" + pizzas)
+      //   console.log("pizzas price" + pizzas[i].price())
 
-        grandTotal += pizzas[i].price();
-      }
+      //   grandTotal += pizzas[i].price();
+      // }
+      // $("#receiptTotal").show();
+      // $("#receiptTotal").text(`Total: ${grandTotal}`)
 
-      console.log(grandTotal)
-      $("#orderButtonBox").text(`Total: ${grandTotal}`)
-
-    pizzas = [];
+      // pizzas = [];
   })
 
 });
