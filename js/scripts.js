@@ -59,7 +59,7 @@ $(document).ready(function(){
     console.log(totalPrice)
 
     $("#receiptTotal").show();
-    $("#receiptTotal").text(`Total: ${totalPrice}`)
+    $("#receiptTotal").text(`Total: $${totalPrice}`)
 
     pizzas = [];
 
@@ -67,18 +67,9 @@ $(document).ready(function(){
 
     $("#totalButton").click(function(){
 
-      // var grandTotal = 0;
+      alert(`Thank you for ordering at Stunning Pizza \n Your Order is cooking! \n Total: $${totalPrice}`)
 
-      // for(var i = 0; i < pizzas.length; i++) {
-      //   console.log("pizzas" + pizzas)
-      //   console.log("pizzas price" + pizzas[i].price())
 
-      //   grandTotal += pizzas[i].price();
-      // }
-      // $("#receiptTotal").show();
-      // $("#receiptTotal").text(`Total: ${grandTotal}`)
-
-      // pizzas = [];
   })
 
 });
